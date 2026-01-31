@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akses Awal Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700&family=Bangers&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hidden element to force font loading -->
+    <div style="font-family: 'Daydream'; visibility: hidden; position: absolute; height: 0; width: 0;">XXL</div>
+    
+    <div class="app-container">
+        <header>
+            <div class="logo-text">a beautiful blur</div>
+            <h1 id="app-title">LANY XXL</h1>
+            <p class="tagline">EVERYTHING LANY • CAPTURE THE MOMENT</p>
+        </header>
+
+        <main>
+            <div class="booth-section">
+                <div class="camera-wrapper">
+                    <video id="video" autoplay playsinline></video>
+                    <div id="countdown" class="hidden">3</div>
+                    <div id="flash" class="hidden"></div>
+                </div>
+
+                <div class="controls">
+                    <button id="start-btn" class="primary-btn">TAKE PHOTOS</button>
+                    <div class="capture-indicators">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-section" class="hidden">
+                <h2>Your Strip</h2>
+                <div class="strip-preview">
+                    <canvas id="strip-canvas"></canvas>
+                </div>
+                <div class="result-actions">
+                    <button id="download-btn" class="secondary-btn">Download Strip</button>
+                    <button id="retake-btn" class="secondary-btn">Take Another</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Akses Awal Photobooth</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
